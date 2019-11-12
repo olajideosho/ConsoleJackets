@@ -69,6 +69,9 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+      <PackageReference Include="Xamarin.iOS.iCarousel">
+        <Version>1.8.4</Version>
+      </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -113,6 +116,28 @@
         <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
             <Visible>false</Visible>
         </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launchScreen.png" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launchscreen2.png" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launch3.png" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launch5.png" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launch6.png" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launch7.png" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launch8.png" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launch9.png" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launch10.png" />
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launch11.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg1.imageset\gradientbg1-2.jpg" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg1.imageset\gradientbg1-1.jpg" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg1.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg1.imageset\gradientbg1.jpg" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg2.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg2.imageset\gradientbg2.jpg" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg3.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg3.imageset\gradientbg3.jpg" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg4.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg4.imageset\gradientbg4.jpg" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
@@ -121,10 +146,12 @@
         <Folder Include="Views\" />
         <Folder Include="Views\Storyboards\" />
         <Folder Include="Views\Support\" />
+        <Folder Include="Assets.xcassets\Launching.imageset\" />
+        <Folder Include="Resources\Sounds\" />
+        <Folder Include="Resources\Images\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="Views\Storyboards\Main.storyboard" />
-        <InterfaceDefinition Include="Views\Storyboards\LaunchScreen.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -146,6 +173,8 @@
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\Lombok.otf" />
+      <BundleResource Include="Resources\Sounds\bgmusic.mp3" />
+      <BundleResource Include="Resources\Images\gradientbg1.jpg" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -11,6 +11,8 @@ namespace ConsoleJackets
     {
         private nfloat leftOInitialPosition;
         private nfloat rightOInitialPosition;
+        public static int loopNumber = 100;
+        public static int loopCount = 0;
         
         public ConsoleLogoAnimationViewController (IntPtr handle) : base (handle)
         {
@@ -29,14 +31,14 @@ namespace ConsoleJackets
         {
             base.ViewWillAppear(animated);
 
-            StartAnimation(3);
+            StartAnimation(loopNumber);
 
             Console.WriteLine("Hello");
         }
 
         private async Task StartAnimation(int loop)
         {
-            foreach(int i in Enumerable.Range(1, loop))
+            foreach(int i in Enumerable.Range(1, loopNumber))
             {
                 await Task.Delay(3000);
                 //All Disappear Except from Os.

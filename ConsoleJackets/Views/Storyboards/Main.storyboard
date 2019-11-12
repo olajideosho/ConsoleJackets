@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lombok.otf">
+            <string>Lombok</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Console Logo Animation View Controller-->
+        <scene sceneID="YvX-ar-wjD">
+            <objects>
+                <viewController storyboardIdentifier="ConsoleLogoAnimationViewController" id="mMD-6N-y0P" customClass="ConsoleLogoAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oBr-f6-fuu"/>
+                        <viewControllerLayoutGuide type="bottom" id="vRo-AQ-vjb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="huf-re-PU0">
+                        <rect key="frame" x="0.0" y="0.0" width="309" height="48"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="job-xi-duX">
+                                <rect key="frame" x="208" y="11.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="IIk-hQ-1oR"/>
+                                    <constraint firstAttribute="height" constant="25" id="VHL-dm-Wps"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lombok" family="Lombok" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D8-EQ-J6M">
+                                <rect key="frame" x="142" y="11.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Sgt-TO-fTp"/>
+                                    <constraint firstAttribute="width" constant="25" id="fxj-1j-ail"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lombok" family="Lombok" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jJ-gg-GSl">
+                                <rect key="frame" x="109" y="11.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="fd7-HV-XAX"/>
+                                    <constraint firstAttribute="height" constant="25" id="zYR-oS-U7a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lombok" family="Lombok" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pw0-Dg-PJi">
+                                <rect key="frame" x="43" y="11.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="CRK-MO-zm5"/>
+                                    <constraint firstAttribute="width" constant="25" id="ORS-u6-VN5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lombok" family="Lombok" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-VC-Bju">
+                                <rect key="frame" x="76" y="11.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="GhA-YY-W34"/>
+                                    <constraint firstAttribute="height" constant="25" id="jRo-ii-y4j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lombok" family="Lombok" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buf-rz-cDR">
+                                <rect key="frame" x="175" y="11.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="2E4-Nb-xxI"/>
+                                    <constraint firstAttribute="width" constant="25" id="4qA-Ov-9Jp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lombok" family="Lombok" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXs-1i-WlQ">
+                                <rect key="frame" x="241" y="11.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Vr5-CY-cTi"/>
+                                    <constraint firstAttribute="height" constant="25" id="Xh7-oh-aZO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lombok" family="Lombok" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17o-J1-RtE">
+                                <rect key="frame" x="274" y="11.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="VH0-7z-Vbr"/>
+                                    <constraint firstAttribute="width" constant="25" id="yBj-Ea-N6Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lombok" family="Lombok" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCr-2b-g3y">
+                                <rect key="frame" x="10" y="11.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="3Eb-zv-wce"/>
+                                    <constraint firstAttribute="height" constant="25" id="rG6-3m-a7Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lombok" family="Lombok" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1jJ-gg-GSl" firstAttribute="leading" secondItem="q0h-VC-Bju" secondAttribute="trailing" constant="8" id="2s3-kk-Sns"/>
+                            <constraint firstItem="17o-J1-RtE" firstAttribute="centerY" secondItem="huf-re-PU0" secondAttribute="centerY" id="61o-ZM-bIl"/>
+                            <constraint firstItem="1jJ-gg-GSl" firstAttribute="centerY" secondItem="huf-re-PU0" secondAttribute="centerY" id="6L5-7M-qHW"/>
+                            <constraint firstItem="4D8-EQ-J6M" firstAttribute="centerX" secondItem="huf-re-PU0" secondAttribute="centerX" id="6Rn-M5-zW2"/>
+                            <constraint firstItem="q0h-VC-Bju" firstAttribute="centerY" secondItem="huf-re-PU0" secondAttribute="centerY" id="AWK-Vv-cf5"/>
+                            <constraint firstItem="buf-rz-cDR" firstAttribute="leading" secondItem="4D8-EQ-J6M" secondAttribute="trailing" constant="8" id="DHS-nL-edu"/>
+                            <constraint firstItem="rCr-2b-g3y" firstAttribute="centerY" secondItem="huf-re-PU0" secondAttribute="centerY" id="Hdo-wB-gSG"/>
+                            <constraint firstItem="17o-J1-RtE" firstAttribute="leading" secondItem="qXs-1i-WlQ" secondAttribute="trailing" constant="8" id="Ihb-jq-X6a"/>
+                            <constraint firstItem="job-xi-duX" firstAttribute="centerY" secondItem="huf-re-PU0" secondAttribute="centerY" id="Ilc-ws-pPf"/>
+                            <constraint firstItem="pw0-Dg-PJi" firstAttribute="centerY" secondItem="huf-re-PU0" secondAttribute="centerY" id="RW1-Jy-l3U"/>
+                            <constraint firstItem="qXs-1i-WlQ" firstAttribute="leading" secondItem="job-xi-duX" secondAttribute="trailing" constant="8" id="UBy-en-p7O"/>
+                            <constraint firstItem="qXs-1i-WlQ" firstAttribute="centerY" secondItem="huf-re-PU0" secondAttribute="centerY" id="b47-dB-Gdl"/>
+                            <constraint firstItem="job-xi-duX" firstAttribute="leading" secondItem="buf-rz-cDR" secondAttribute="trailing" constant="8" id="c2s-fr-8bi"/>
+                            <constraint firstItem="4D8-EQ-J6M" firstAttribute="leading" secondItem="1jJ-gg-GSl" secondAttribute="trailing" constant="8" id="dZh-FT-AgE"/>
+                            <constraint firstItem="buf-rz-cDR" firstAttribute="centerY" secondItem="huf-re-PU0" secondAttribute="centerY" id="gUY-8k-jW7"/>
+                            <constraint firstItem="4D8-EQ-J6M" firstAttribute="centerY" secondItem="huf-re-PU0" secondAttribute="centerY" id="hOG-mV-52J"/>
+                            <constraint firstItem="pw0-Dg-PJi" firstAttribute="leading" secondItem="rCr-2b-g3y" secondAttribute="trailing" constant="8" id="igg-WY-JfE"/>
+                            <constraint firstItem="q0h-VC-Bju" firstAttribute="leading" secondItem="pw0-Dg-PJi" secondAttribute="trailing" constant="8" id="jxP-zt-bmL"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="309" height="48"/>
+                    <connections>
+                        <outlet property="leftC" destination="pw0-Dg-PJi" id="FRW-Q8-L2E"/>
+                        <outlet property="leftDash" destination="rCr-2b-g3y" id="pN2-QS-dRn"/>
+                        <outlet property="leftN" destination="1jJ-gg-GSl" id="LtP-RY-SiC"/>
+                        <outlet property="leftO" destination="q0h-VC-Bju" id="yAS-WR-BVM"/>
+                        <outlet property="leftOPositionControl" destination="2s3-kk-Sns" id="ahG-DQ-x5e"/>
+                        <outlet property="midS" destination="4D8-EQ-J6M" id="YuT-JK-dva"/>
+                        <outlet property="rightDash" destination="17o-J1-RtE" id="JCX-4U-rAz"/>
+                        <outlet property="rightE" destination="qXs-1i-WlQ" id="BMB-uu-uA1"/>
+                        <outlet property="rightL" destination="job-xi-duX" id="15s-xQ-ys1"/>
+                        <outlet property="rightO" destination="buf-rz-cDR" id="6Su-eI-QJx"/>
+                        <outlet property="rightOPositionControl" destination="DHS-nL-edu" id="Llf-N0-XeY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnJ-Tg-hDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="736"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LaunchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRZ-wW-lHv">
+                                <rect key="frame" x="33" y="309.5" width="309" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="4iX-Xq-00a"/>
+                                    <constraint firstAttribute="height" constant="48" id="Ba8-m7-Hkn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="309" id="KY6-qb-MQ1"/>
+                                    <constraint firstAttribute="width" constant="309" id="ia1-lV-O2j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LRZ-wW-lHv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r7i-rA-fEm"/>
+                            <constraint firstItem="LRZ-wW-lHv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uwG-Fm-RUk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoView" destination="LRZ-wW-lHv" id="oay-fX-izf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977509999999998"/>
+        </scene>
+    </scenes>
+</document>

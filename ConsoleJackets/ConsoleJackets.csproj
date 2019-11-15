@@ -138,6 +138,10 @@
         <ImageAsset Include="Resources\Assets.xcassets\gradientbg3.imageset\gradientbg3.jpg" />
         <ImageAsset Include="Resources\Assets.xcassets\gradientbg4.imageset\Contents.json" />
         <ImageAsset Include="Resources\Assets.xcassets\gradientbg4.imageset\gradientbg4.jpg" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg5.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\gradientbg5.imageset\gradientbg5.jpg" />
+        <ImageAsset Include="Resources\Assets.xcassets\fulljacketrans2.imageset\fulljacketrans2.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\fulljacketrans2.imageset\Contents.json" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
@@ -169,6 +173,10 @@
         <Compile Include="ViewControllers\ConsoleLogoAnimationViewController.cs" />
         <Compile Include="ViewControllers\ConsoleLogoAnimationViewController.designer.cs">
           <DependentUpon>ConsoleLogoAnimationViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\JacketCardViewController.cs" />
+        <Compile Include="ViewControllers\JacketCardViewController.designer.cs">
+          <DependentUpon>JacketCardViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <ItemGroup>

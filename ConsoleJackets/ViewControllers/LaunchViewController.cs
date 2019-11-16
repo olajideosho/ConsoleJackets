@@ -1,4 +1,5 @@
 ﻿using AVFoundation;
+using ConsoleJackets.ViewControllers;
 using CoreGraphics;
 using Foundation;
 using System;
@@ -17,6 +18,7 @@ namespace ConsoleJackets
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            
             var soundUrl = new NSUrl("Sounds/bgmusic.mp3");
             NSError err;
             audioPlayer = new AVAudioPlayer(soundUrl, "Song", out err);
@@ -29,6 +31,7 @@ namespace ConsoleJackets
 
             var logoVC = Storyboard.InstantiateViewController("ConsoleLogoAnimationViewController") as ConsoleLogoAnimationViewController;
             var consoleLogoView = logoVC.View;
+            logoVC.StartAnimation(ConsoleLogoAnimationViewController.loopNumber);
             consoleLogoView.Frame = new CGRect(0, 0, 309, 48);
             logoView.AddSubview(consoleLogoView);
 
@@ -49,8 +52,19 @@ namespace ConsoleJackets
 
             jacketCarousel.AddSubview(carousel);
 
-            
-            
+            addJacketButton.TouchUpInside += AddJacketButton_TouchUpInside;
+
+            NavigationController.NavigationBar.Hidden = true;
+
+        }
+
+        private void AddJacketButton_TouchUpInside(object sender, EventArgs e)
+        {
+            var uploadJacketVC = Storyboard.InstantiateViewController("UploadJacketViewController") as UploadJacketViewController;
+            uploadJacketVC.View.BackgroundColor = UIColor.Black.ColorWithAlpha((nfloat)0.5);
+            uploadJacketVC.ModalPresentationStyle = UIModalPresentationStyle.BlurOverFullScreen;
+
+            PresentViewController(uploadJacketVC, true, null);
         }
 
         private void AudioPlayer_FinishedPlaying(object sender, AVStatusEventArgs e)

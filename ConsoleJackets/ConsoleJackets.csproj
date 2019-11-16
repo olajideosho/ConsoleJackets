@@ -165,7 +165,6 @@
     <ItemGroup>
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
-        <Compile Include="SceneDelegate.cs" />
         <Compile Include="ViewControllers\LaunchViewController.cs" />
         <Compile Include="ViewControllers\LaunchViewController.designer.cs">
           <DependentUpon>LaunchViewController.cs</DependentUpon>
@@ -177,6 +176,10 @@
         <Compile Include="ViewControllers\JacketCardViewController.cs" />
         <Compile Include="ViewControllers\JacketCardViewController.designer.cs">
           <DependentUpon>JacketCardViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\UploadJacketViewController.cs" />
+        <Compile Include="ViewControllers\UploadJacketViewController.designer.cs">
+          <DependentUpon>UploadJacketViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <ItemGroup>

@@ -31,12 +31,12 @@ namespace ConsoleJackets
         {
             base.ViewWillAppear(animated);
 
-            StartAnimation(loopNumber);
+            //StartAnimation(loopNumber);
 
             Console.WriteLine("Hello");
         }
 
-        private async Task StartAnimation(int loop)
+        public async Task StartAnimation(int loop)
         {
             foreach(int i in Enumerable.Range(1, loopNumber))
             {

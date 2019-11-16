@@ -14,6 +14,18 @@ namespace ConsoleJackets
     partial class LaunchViewController
     {
         [Outlet]
+        UIKit.UIButton aboutButton { get; set; }
+
+
+        [Outlet]
+        UIKit.UIButton addJacketButton { get; set; }
+
+
+        [Outlet]
+        UIKit.UIButton buyJacketButton { get; set; }
+
+
+        [Outlet]
         UIKit.UIView jacketCarousel { get; set; }
 
 
@@ -30,7 +42,15 @@ namespace ConsoleJackets
 
 
         [Outlet]
+        UIKit.UILabel remainingJacketLabel { get; set; }
+
+
+        [Outlet]
         UIKit.UIView remainingJacketView { get; set; }
+
+
+        [Outlet]
+        UIKit.UIButton searchJacketByIdButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {

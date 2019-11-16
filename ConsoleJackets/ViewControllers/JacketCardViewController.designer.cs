@@ -7,13 +7,23 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace ConsoleJackets
 {
     [Register ("JacketCardViewController")]
     partial class JacketCardViewController
     {
+        [Outlet]
+        UIKit.UILabel jacketIDLabel { get; set; }
+
+
+        [Outlet]
+        UIKit.UILabel jacketOwnerLabel { get; set; }
+
+
+        [Outlet]
+        UIKit.UILabel locationLabel { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
         }

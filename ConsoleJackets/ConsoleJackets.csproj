@@ -149,10 +149,11 @@
         <Folder Include="Models\" />
         <Folder Include="Views\" />
         <Folder Include="Views\Storyboards\" />
-        <Folder Include="Views\Support\" />
         <Folder Include="Assets.xcassets\Launching.imageset\" />
         <Folder Include="Resources\Sounds\" />
         <Folder Include="Resources\Images\" />
+        <Folder Include="Services\" />
+        <Folder Include="ViewModels\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="Views\Storyboards\Main.storyboard" />
@@ -180,6 +181,18 @@
         <Compile Include="ViewControllers\UploadJacketViewController.cs" />
         <Compile Include="ViewControllers\UploadJacketViewController.designer.cs">
           <DependentUpon>UploadJacketViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\BuyJacketViewController.cs" />
+        <Compile Include="ViewControllers\BuyJacketViewController.designer.cs">
+          <DependentUpon>BuyJacketViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\SearchJacketViewController.cs" />
+        <Compile Include="ViewControllers\SearchJacketViewController.designer.cs">
+          <DependentUpon>SearchJacketViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\AboutViewController.cs" />
+        <Compile Include="ViewControllers\AboutViewController.designer.cs">
+          <DependentUpon>AboutViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <ItemGroup>

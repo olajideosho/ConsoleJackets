@@ -6,7 +6,6 @@ namespace ConsoleJackets.ViewControllers
 {
     public partial class UploadJacketViewController : UIViewController
     {
-        UIColor successGreen = new UIColor(0, 0, 0, 0);
         public UploadJacketViewController() : base("UploadJacketViewController", null)
         {
         }
@@ -19,16 +18,30 @@ namespace ConsoleJackets.ViewControllers
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
-            successGreen = uploadStatusLabel.TextColor;
 
-            uploadStatusLabel.TextColor = UIColor.White;
+            uploadStatusLabel.TextColor = UIColor.LightGray;
+
+            jacketOwnerTextField.Layer.CornerRadius = 10;
+            jacketOwnerTextField.ClipsToBounds = true;
+            jacketIdTextField.Layer.CornerRadius = 10;
+            jacketIdTextField.ClipsToBounds = true;
+            secretKeyTextField.Layer.CornerRadius = 10;
+            secretKeyTextField.ClipsToBounds = true;
 
             uploadJacketView.Layer.CornerRadius = 10;
             uploadJacketView.ClipsToBounds = true;
-            uploadJacketButton.Layer.CornerRadius = 4;
+            uploadJacketButton.Layer.CornerRadius = 10;
+            uploadJacketButton.ClipsToBounds = true;
             uploadJacketButton.TouchUpInside += UploadJacketButton_TouchUpInside;
 
+            xButton.TouchUpInside += XButton_TouchUpInside;
+
             uploadStatusLabel.Hidden = true;
+        }
+
+        private void XButton_TouchUpInside(object sender, EventArgs e)
+        {
+            DismissModalViewController(true);
         }
 
         private async void UploadJacketButton_TouchUpInside(object sender, EventArgs e)
@@ -37,10 +50,10 @@ namespace ConsoleJackets.ViewControllers
             uploadStatusLabel.Hidden = false;
             await Task.Delay(4000);
 
-            uploadStatusLabel.TextColor = successGreen;
+            uploadStatusLabel.TextColor = UIColor.FromRGB(0, 143, 0).ColorWithAlpha((nfloat)0.5);
             uploadStatusLabel.Text = "Jacket Assigned Successfully";
             await Task.Delay(4000);
-            DismissModalViewController(true);
+            
         }
 
         public override void DidReceiveMemoryWarning()

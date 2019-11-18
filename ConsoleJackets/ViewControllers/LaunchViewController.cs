@@ -54,8 +54,47 @@ namespace ConsoleJackets
 
             addJacketButton.TouchUpInside += AddJacketButton_TouchUpInside;
 
+            buyJacketButton.TouchUpInside += BuyJacketButton_TouchUpInside;
+
+            searchJacketByIdButton.TouchUpInside += SearchJacketByIdButton_TouchUpInside;
+
+            aboutButton.TouchUpInside += AboutButton_TouchUpInside;
+
             NavigationController.NavigationBar.Hidden = true;
 
+            remainingJacketView.Layer.CornerRadius = 10;
+            remainingJacketView.ClipsToBounds = true;
+
+            loginSignupView.Layer.CornerRadius = 10;
+            loginSignupView.ClipsToBounds = true;
+
+        }
+
+        private void AboutButton_TouchUpInside(object sender, EventArgs e)
+        {
+            var aboutVC = Storyboard.InstantiateViewController("AboutViewController") as AboutViewController;
+            aboutVC.View.BackgroundColor = UIColor.Black.ColorWithAlpha((nfloat)0.5);
+            aboutVC.ModalPresentationStyle = UIModalPresentationStyle.BlurOverFullScreen;
+
+            PresentViewController(aboutVC, true, null);
+        }
+
+        private void SearchJacketByIdButton_TouchUpInside(object sender, EventArgs e)
+        {
+            var searchJacketVC = Storyboard.InstantiateViewController("SearchJacketViewController") as SearchJacketViewController;
+            searchJacketVC.View.BackgroundColor = UIColor.Black.ColorWithAlpha((nfloat)0.5);
+            searchJacketVC.ModalPresentationStyle = UIModalPresentationStyle.BlurOverFullScreen;
+
+            PresentViewController(searchJacketVC, true, null);
+        }
+
+        private void BuyJacketButton_TouchUpInside(object sender, EventArgs e)
+        {
+            var buyJacketVC = Storyboard.InstantiateViewController("BuyJacketViewController") as BuyJacketViewController;
+            buyJacketVC.View.BackgroundColor = UIColor.Black.ColorWithAlpha((nfloat)0.5);
+            buyJacketVC.ModalPresentationStyle = UIModalPresentationStyle.BlurOverFullScreen;
+
+            PresentViewController(buyJacketVC, true, null);
         }
 
         private void AddJacketButton_TouchUpInside(object sender, EventArgs e)

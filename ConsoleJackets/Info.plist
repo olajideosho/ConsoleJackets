@@ -67,5 +67,13 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Console Jackets would like to access your location for records.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Console Jackets would like to access your location for records.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Console Jackets would like to access your location for records.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Console Jackets would like to access your location for records.</string>
 </dict>
 </plist>

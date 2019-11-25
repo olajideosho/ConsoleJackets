@@ -23,7 +23,12 @@ namespace ConsoleJackets
 
         private void DoneButton_TouchUpInside(object sender, EventArgs e)
         {
-            DismissModalViewController(true);
+            DismissViewController(true, () =>
+            {
+                LaunchViewController.ReloadDetails();
+            });
+
+
         }
     }
 }

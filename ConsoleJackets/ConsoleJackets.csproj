@@ -194,6 +194,18 @@
         <Compile Include="ViewControllers\AboutViewController.designer.cs">
           <DependentUpon>AboutViewController.cs</DependentUpon>
         </Compile>
+        <Compile Include="Models\Jacket.cs" />
+        <Compile Include="Services\MockAPIService.cs" />
+        <Compile Include="ViewModels\LaunchViewModel.cs" />
+        <Compile Include="ViewControllers\ConnectingViewController.cs" />
+        <Compile Include="ViewControllers\ConnectingViewController.designer.cs">
+          <DependentUpon>ConnectingViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Services\AlertService.cs" />
+        <Compile Include="ViewModels\UploadJacketViewModel.cs" />
+        <Compile Include="Models\Response.cs" />
+        <Compile Include="Models\JacketUploadRequest.cs" />
+        <Compile Include="ViewModels\SearchJacketViewModel.cs" />
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\Lombok.otf" />

@@ -7,21 +7,12 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace ConsoleJackets
 {
-    [Register ("BuyJacketViewController")]
-    partial class BuyJacketViewController
+    [Register ("ConnectingViewController")]
+    partial class ConnectingViewController
     {
-        [Outlet]
-        UIKit.UIView buyJacketView { get; set; }
-
-
-        [Outlet]
-        UIKit.UIButton doneButton { get; set; }
-
-        void ReleaseDesignerOutlets ()
-        {
-        }
     }
 }

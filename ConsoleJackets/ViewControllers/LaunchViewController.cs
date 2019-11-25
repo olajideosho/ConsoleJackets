@@ -1,8 +1,11 @@
 ﻿using AVFoundation;
+using ConsoleJackets.Models;
 using ConsoleJackets.ViewControllers;
+using ConsoleJackets.ViewModels;
 using CoreGraphics;
 using Foundation;
 using System;
+using System.Collections.Generic;
 using UIKit;
 using Xamarin.iOS.iCarouselBinding;
 
@@ -11,6 +14,10 @@ namespace ConsoleJackets
     public partial class LaunchViewController : UIViewController
     {
         public AVAudioPlayer audioPlayer;
+        public static LaunchViewModel launchViewModel;
+        public static List<JacketCardViewController> jacketCardViewControllers;
+        public static LaunchViewController launchVCRef;
+
         public LaunchViewController(IntPtr handle) : base(handle)
         {
         }
@@ -18,7 +25,10 @@ namespace ConsoleJackets
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            
+            launchViewModel = new LaunchViewModel();
+            jacketCardViewControllers = new List<JacketCardViewController>();
+            launchVCRef = this;
+         
             var soundUrl = new NSUrl("Sounds/bgmusic.mp3");
             NSError err;
             audioPlayer = new AVAudioPlayer(soundUrl, "Song", out err);
@@ -46,7 +56,7 @@ namespace ConsoleJackets
                 CenterItemWhenSelected = true,
                 ViewpointOffset = new CGSize((nfloat)(5), (nfloat)0),
                 PagingEnabled = true,
-                DataSource = new JacketCarouselDataSource(Storyboard),
+                DataSource = new JacketCarouselDataSource(Storyboard, jacketCardViewControllers),
                 Delegate = new JacketCarouselDelegate(jacketCarouselPageControl)
             };
 
@@ -68,6 +78,80 @@ namespace ConsoleJackets
             loginSignupView.Layer.CornerRadius = 10;
             loginSignupView.ClipsToBounds = true;
 
+
+
+        }
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+
+            InvokeOnMainThread(async () =>
+            {
+                var connectingVC = Storyboard.InstantiateViewController("ConnectingViewController") as ConnectingViewController;
+                var connectingView = connectingVC.View;
+                View.AddSubview(connectingView);
+
+                var jacketIndex = 0;
+                await launchViewModel.GetRecentJacketsAsync();
+                var count = await launchViewModel.GetRemaingJacketCount();
+                foreach(var JCVC in jacketCardViewControllers)
+                {
+                    JCVC.JacketOwnerLabel.Text = launchViewModel.RecentJacketList[jacketIndex].JacketOwner;
+                    JCVC.JacketIDLabel.Text = "/USR/BIN/" + launchViewModel.RecentJacketList[jacketIndex].JacketID;
+                    JCVC.LocationLabel.Text = launchViewModel.RecentJacketList[jacketIndex].Location;
+                    jacketIndex++;
+                }
+                remainingJacketLabel.Text = count.ToString();
+
+                connectingView.RemoveFromSuperview();
+            });
+            
+
+        }
+
+        public static void ReloadDetails()
+        {
+            
+            launchVCRef.InvokeOnMainThread(async () =>
+            {
+                foreach (var JCVC in jacketCardViewControllers)
+                {
+                    JCVC.JacketOwnerLabel.Text = "Retrieving Details...";
+                    JCVC.JacketIDLabel.Text = "Retrieving Details...";
+                    JCVC.LocationLabel.Text = "Retrieving Details...";
+                }
+
+                launchVCRef.remainingJacketLabel.Text = "Retrieving Details...";
+
+                var connectingVC = launchVCRef.Storyboard.InstantiateViewController("ConnectingViewController") as ConnectingViewController;
+                var connectingView = connectingVC.View;
+                launchVCRef.View.AddSubview(connectingView);
+
+                var jacketIndex = 0;
+                await launchViewModel.GetRecentJacketsAsync();
+                var count = await launchViewModel.GetRemaingJacketCount();
+                foreach (var JCVC in jacketCardViewControllers)
+                {
+                    JCVC.JacketOwnerLabel.Text = launchViewModel.RecentJacketList[jacketIndex].JacketOwner;
+                    JCVC.JacketIDLabel.Text = "/USR/BIN/" + launchViewModel.RecentJacketList[jacketIndex].JacketID;
+                    JCVC.LocationLabel.Text = launchViewModel.RecentJacketList[jacketIndex].Location;
+                    jacketIndex++;
+                }
+
+                launchVCRef.remainingJacketLabel.Text = count.ToString();
+
+                connectingView.RemoveFromSuperview();
+            });
+
+            
+        }
+
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+
+            Console.WriteLine("Hello");
         }
 
         private void AboutButton_TouchUpInside(object sender, EventArgs e)
@@ -145,10 +229,12 @@ namespace ConsoleJackets
     internal class JacketCarouselDataSource : iCarouselDataSource
     {
         private readonly UIStoryboard _storyboard;
+        private readonly List<JacketCardViewController> _jacketCardViewControllers;
 
-        public JacketCarouselDataSource(UIStoryboard storyboard)
+        public JacketCarouselDataSource(UIStoryboard storyboard, List<JacketCardViewController> jacketCardViewControllers)
         {
             _storyboard = storyboard;
+            _jacketCardViewControllers = jacketCardViewControllers;
         }
 
         public override nint NumberOfItemsInCarousel(iCarousel carousel)
@@ -161,6 +247,10 @@ namespace ConsoleJackets
         {
             //throw new NotImplementedException();
             var jacketCardVC = _storyboard.InstantiateViewController("JacketCardViewController") as JacketCardViewController;
+            _jacketCardViewControllers.Add(jacketCardVC);
+            //jacketCardVC.JacketOwnerLabel.Text = _JacketList[(Convert.ToInt16(index))].JacketOwner;
+            //jacketCardVC.JacketIDLabel.Text = _JacketList[(Convert.ToInt16(index))].JacketID;
+            //jacketCardVC.LocationLabel.Text = _JacketList[(Convert.ToInt16(index))].Location;
             var jacketCardView = jacketCardVC.View;
             var outerView = new UIView()
             {

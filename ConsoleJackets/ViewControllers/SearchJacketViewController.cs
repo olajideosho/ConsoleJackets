@@ -53,6 +53,11 @@ namespace ConsoleJackets
                 return;
             }
 
+            if(jacketIdTextField.Text.Length != 4)
+            {
+                return;
+            }
+
             jacketOwnerLabel.Hidden = true;
             jacketIdLabel.Hidden = true;
             locationLabel.Hidden = true;
@@ -60,6 +65,7 @@ namespace ConsoleJackets
             searchButton.UserInteractionEnabled = false;
             searchButton.SetTitle("Searching...", UIControlState.Normal);
 
+            jacketIdTextField.Text = jacketIdTextField.Text.ToUpper();
             var jacket = await searchJacketViewModel.GetJacketWithId(jacketIdTextField.Text);
             if (jacket.JacketID == null)
             {

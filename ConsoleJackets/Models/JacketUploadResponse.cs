@@ -1,9 +1,9 @@
 ﻿using System;
 namespace ConsoleJackets.Models
 {
-    public class Response
+    public class JacketUploadResponse
     {
-        public Response()
+        public JacketUploadResponse()
         {
         }
 

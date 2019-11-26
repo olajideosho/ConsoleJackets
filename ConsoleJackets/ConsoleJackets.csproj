@@ -203,9 +203,10 @@
         </Compile>
         <Compile Include="Services\AlertService.cs" />
         <Compile Include="ViewModels\UploadJacketViewModel.cs" />
-        <Compile Include="Models\Response.cs" />
+        <Compile Include="Models\JacketUploadResponse.cs" />
         <Compile Include="Models\JacketUploadRequest.cs" />
         <Compile Include="ViewModels\SearchJacketViewModel.cs" />
+        <Compile Include="Models\JacketsRemainingResponse.cs" />
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\Lombok.otf" />

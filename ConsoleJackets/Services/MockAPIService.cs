@@ -43,14 +43,15 @@ namespace ConsoleJackets.Services
         public static async Task<int> GetRemainingJacketCount()
         {
             await Task.Delay(3000);
-            var remainingJacketCount = 5000 - Jackets.Count;
-            return remainingJacketCount;
+            var remaining = new JacketsRemainingResponse();
+            remaining.Count = 5000 - Jackets.Count;
+            return remaining.Count;
         }
 
-        public static async Task<Response> PostJacket(JacketUploadRequest jacketRequest)
+        public static async Task<JacketUploadResponse> PostJacket(JacketUploadRequest jacketRequest)
         {
             await Task.Delay(3000);
-            var response = new Response
+            var response = new JacketUploadResponse
             {
                 Error = false,
                 Message = "Jacket Upload Successful"

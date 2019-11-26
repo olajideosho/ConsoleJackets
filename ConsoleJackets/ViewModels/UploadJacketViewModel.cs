@@ -8,19 +8,19 @@ namespace ConsoleJackets.ViewModels
     public class UploadJacketViewModel
     {
         public JacketUploadRequest payload;
-        public Response response;
+        public JacketUploadResponse response;
         public UploadJacketViewModel()
         {
         }
 
-        public async Task<Response> UploadJacket()
+        public async Task<JacketUploadResponse> UploadJacket()
         {
             if(payload != null)
             {
                 response = await MockAPIService.PostJacket(payload);
                 return response;
             }
-            return new Response { Error = true, Message = "Something went wrong" };
+            return new JacketUploadResponse { Error = true, Message = "Something went wrong" };
         }
     }
 }

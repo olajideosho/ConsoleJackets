@@ -97,17 +97,32 @@ namespace ConsoleJackets
                 var count = await launchViewModel.GetRemaingJacketCount();
                 foreach(var JCVC in jacketCardViewControllers)
                 {
-                    JCVC.JacketOwnerLabel.Text = launchViewModel.RecentJacketList[jacketIndex].JacketOwner;
-                    JCVC.JacketIDLabel.Text = "/USR/BIN/" + launchViewModel.RecentJacketList[jacketIndex].JacketID;
-                    JCVC.LocationLabel.Text = launchViewModel.RecentJacketList[jacketIndex].Location;
+                    if(launchViewModel.RecentJacketList[jacketIndex].JacketID == null)
+                    {
+                        JCVC.JacketOwnerLabel.Text = "Connection Error";
+                        JCVC.JacketIDLabel.Text = "Connection Error";
+                        JCVC.LocationLabel.Text = "Connection Error";
+                    }
+                    else
+                    {
+                        JCVC.JacketOwnerLabel.Text = launchViewModel.RecentJacketList[jacketIndex].JacketOwner;
+                        JCVC.JacketIDLabel.Text = "/USR/BIN/" + launchViewModel.RecentJacketList[jacketIndex].JacketID;
+                        JCVC.LocationLabel.Text = launchViewModel.RecentJacketList[jacketIndex].Location;
+                    }
                     jacketIndex++;
                 }
-                remainingJacketLabel.Text = count.ToString();
+
+                if(count == 9999)
+                {
+                    remainingJacketLabel.Text = "Connection Error";
+                }
+                else
+                {
+                    remainingJacketLabel.Text = count.ToString();
+                }
 
                 connectingView.RemoveFromSuperview();
             });
-            
-
         }
 
         public static void ReloadDetails()

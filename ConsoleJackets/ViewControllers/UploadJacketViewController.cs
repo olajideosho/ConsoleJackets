@@ -158,7 +158,7 @@ namespace ConsoleJackets.ViewControllers
             {
                 IndexId = 0,
                 Owner = jacketOwnerTextField.Text,
-                ID = jacketIdTextField.Text,
+                ID = jacketIdTextField.Text.ToUpper(),
                 Secret = secretKeyTextField.Text,
                 Country = country
             };
